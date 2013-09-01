@@ -57,6 +57,9 @@ public class Plugin extends JavaPlugin implements Listener
 		if(!matched)
 			return;
 		
+		if(event.getPlayer().hasPermission("trustedhomes.bypass"))
+			return;
+		
 		PlayerData pdata = GriefPrevention.instance.dataStore.getPlayerData(event.getPlayer().getName());
 		Claim claim = GriefPrevention.instance.dataStore.getClaimAt(event.getPlayer().getLocation(), true, pdata.lastClaim);
 		

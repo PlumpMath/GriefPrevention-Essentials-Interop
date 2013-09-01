@@ -6,3 +6,7 @@ version: 1.0
 main: au.com.mineauz.GPA.Plugin
 
 depend: [GriefPrevention, Essentials]
+
+permissions:
+  trustedhomes.bypass:
+    default: op
